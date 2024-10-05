@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import Portfolio from './components/body/portfolio';
 import Contact from './components/body/contact';
 import Resume from './components/body/resume';
+import './App.css';
 
 const App = () => {
   const [currentSection, setCurrentSection] = useState('');
@@ -13,12 +14,12 @@ const App = () => {
     <Router>
       <div className="app">
         <Header currentSection={currentSection} />
-        <main>
+        <main className="container">
           <Routes>
             <Route path="/" element={<AboutMe setCurrentSection={setCurrentSection} />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/resume" element={<Resume />} />
+            <Route path="/portfolio" element={<Portfolio setCurrentSection={setCurrentSection}/>} />
+            <Route path="/contact" element={<Contact setCurrentSection={setCurrentSection}/>} />
+            <Route path="/resume" element={<Resume setCurrentSection={setCurrentSection}/>} />
           </Routes>
         </main>
         <Footer />

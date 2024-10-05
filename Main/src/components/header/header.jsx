@@ -1,6 +1,7 @@
 
 import { useLocation, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import './header.css';
 
 const Header = ({ currentSection}) => {
     const location = useLocation();
@@ -16,6 +17,7 @@ const Header = ({ currentSection}) => {
   
     return (
       <header>
+        <div className='container'>
         <h1>Ryan Paulette</h1>
         <nav>
           <NavLink to="/" className={activeSection === 'About Me' ? 'active' : ''}>
@@ -31,6 +33,7 @@ const Header = ({ currentSection}) => {
             Resume
           </NavLink>
         </nav>
+        </div>
       </header>
     );
   };
