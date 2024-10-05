@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './resume.css';
 
 const Resume = ({ setCurrentSection }) => {
         useEffect(() => {
@@ -6,7 +7,7 @@ const Resume = ({ setCurrentSection }) => {
     }, [setCurrentSection]);
     
     return (
-        <section>
+        <section className='resume'>
             <h2>Resume</h2>
             <a href='/assets/Resume.pdf' download>Download Resume</a>
             <h3>Proficiencies</h3>

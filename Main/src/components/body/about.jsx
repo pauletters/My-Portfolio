@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import './about.css';
 
 const AboutMe = ({ setCurrentSection }) => {
     useEffect(() => {
@@ -6,13 +7,15 @@ const AboutMe = ({ setCurrentSection }) => {
   }, [setCurrentSection]);
 
   return (
-    <section>
+    <section className='about-me'>
+      <div>
+      <img src='src/assets/Bio-Pic.jpg' alt='Image of Ryan Paulette' />
       <h2>About Me</h2>
-      <img src='/assets/Bio-Pic.jpg' alt='Image of Ryan Paulette' />
       <p>
        I am an up and coming web developer currently making my way through a coding bootcamp with the University of Richmond. 
        So far I have experience using HTML, CSS, JavaScript, Node.js, Express.js, TypeScript, PostGres SQL, and React.
       </p>
+      </div>
     </section>
   );
 };

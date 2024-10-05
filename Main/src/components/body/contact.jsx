@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './contact.css';
 
 const Contact = ({ setCurrentSection }) => {
         useEffect(() => {
@@ -34,7 +35,7 @@ const Contact = ({ setCurrentSection }) => {
   };
 
     return (
-        <section>
+        <section className='contact'>
       <h2>Contact</h2>
       <form onSubmit={handleSubmit}>
         <div>
