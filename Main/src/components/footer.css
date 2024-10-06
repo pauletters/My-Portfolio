@@ -26,7 +26,7 @@ footer {
 
   .social-icon {
     width: auto;
-    height: 25px;
+    height: 35px;
     transition: var(--transition);
     padding: 0.5rem;
   }
