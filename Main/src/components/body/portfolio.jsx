@@ -8,40 +8,40 @@ const Portfolio = ({ setCurrentSection }) => {
     
    const projects = [
     {
-        title: 'Project 1',
-        // image: '',
-        // deployedLink: '',
-        // repoLink: '',
+        title: 'Petfinder Quiz',
+         image: './src/assets/petfinderquiz-screenshot.jpg',
+         deployedLink: 'https://tomjp424.github.io/pet-finder-quiz/',
+         repoLink: 'https://github.com/Tomjp424/pet-finder-quiz',
     },
     {
-        title: 'Project 2',
-        // image: '',
-        // deployedLink: '',
-        // repoLink: '',
+        title: 'Weather Dashboard App',
+         image: './src/assets/weatherdashboard-screenshot.jpg',
+         deployedLink: 'https://weather-dashboard-app-jc5a.onrender.com/',
+         repoLink: 'https://github.com/pauletters/Weather-Dashboard-App',
     },
     {
-        title: 'Project 3',
-        // image: '',
-        // deployedLink: '',
-        // repoLink: '',
+        title: 'Employee Tracker',
+         image: './src/assets/employeetracker-screenshot.jpg',
+         deployedLink: 'https://drive.google.com/file/d/1_U7Zfv6YAcGObshMqGb-fd180Fx0jFk4/view?usp=sharing',
+         repoLink: 'https://github.com/pauletters/Employee-Tracker',
     },
     {
-        title: 'Project 4',
-        // image: '',
-        // deployedLink: '',
-        // repoLink: '',
+        title: 'Vehicle Builder',
+         image: './src/assets/vehiclebuilder-screenshot.jpg',
+         deployedLink: 'https://drive.google.com/file/d/1pwrYICcUN2BfKtX_KCkZesVdKhtPqasJ/view',
+         repoLink: 'https://github.com/pauletters/Vehicle-Builder?tab=readme-ov-file',
     },
     {
-        title: 'Project 5',
-        // image: '',
-        // deployedLink: '',
-        // repoLink: '',
+        title: 'Readme Generator',
+         image: './src/assets/readmegenerator-screenshot.jpg',
+         deployedLink: 'https://drive.google.com/file/d/1LjZ4mqHSOVHYktlrs6KSboskx5bhbq7h/view',
+         repoLink: 'https://github.com/pauletters/README-Generator?tab=readme-ov-file',
     },
     {
-        title: 'Project 6',
-        // image: '',
-        // deployedLink: '',
-        // repoLink: '',
+        title: 'Study Guide',
+         image: './src/assets/studyguide-screenshot.jpg',
+         deployedLink: 'https://pauletters.github.io/prework-study-guide/',
+         repoLink: 'https://github.com/pauletters/prework-study-guide',
     },
    ];
 
@@ -51,11 +51,11 @@ const Portfolio = ({ setCurrentSection }) => {
             <div className='projects-grid'>
             {projects.map((project, index) => (
                 <div key={index} className='project-card'>
-                    {/* <img src={project.image} alt={`Screenshot of ${project.title}`} /> */}
+                    <img src={project.image} alt={`Screenshot of ${project.title}`} />
                     <h3>{project.title}</h3>
                     <div className='project-links'>
-                    {/* <a href={project.deployedLink} target='_blank' rel='noopener noreferrer'>Deployed Application</a>
-                    <a href={project.repoLink} target='_blank' rel='noopener noreferrer'>Github Repository</a> */}
+                    <a href={project.deployedLink} target='_blank' rel='noopener noreferrer'>Deployed Application</a>
+                    <a href={project.repoLink} target='_blank' rel='noopener noreferrer'>Github Repository</a>
                     </div>
                 </div>
             ))}

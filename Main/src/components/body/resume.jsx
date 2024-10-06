@@ -9,7 +9,7 @@ const Resume = ({ setCurrentSection }) => {
     return (
         <section className='resume'>
             <h2>Resume</h2>
-            <a href='/assets/Resume.pdf' download>Download Resume</a>
+            <a href='./src/assets/Ryan-Resume.pdf' download>Download Resume</a>
             <h3>Proficiencies</h3>
             <ul>
                 <li>HTML</li>

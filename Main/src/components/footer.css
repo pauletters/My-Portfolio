@@ -16,3 +16,21 @@ footer {
   footer a:hover {
     color: var(--primary-color);
   }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    width: auto;
+    height: 25px;
+    transition: var(--transition);
+    padding: 0.5rem;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.1);
+  }
