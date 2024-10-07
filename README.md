@@ -20,7 +20,7 @@ N/A
 
 Upon loading up the page you will be brought initially to the About Me section.   This section provides an image of myself as well as a brief description about me. When you're ready to explore simply click any of the links in the navigation bar at the top to the right of my name.
 
-![](./src/assets/homepage-screenshot.jpg)
+![](./assets/homepage-screenshot.jpg)
 
 The Portfolio section provides access to some of the projects that I have worked on. You will see indivdual cards with a screenshot of the project, the title of the project, and a link to the deployed application as well as a link to that project's GitHub repository.
 
