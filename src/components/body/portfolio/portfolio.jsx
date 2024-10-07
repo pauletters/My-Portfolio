@@ -11,37 +11,37 @@ const Portfolio = ({ setCurrentSection }) => {
    const projects = [
     {
         title: 'Petfinder Quiz',
-         image: './src/assets/petfinderquiz-screenshot.jpg',
+         image: '/assets/petfinderquiz-screenshot.jpg',
          deployedLink: 'https://tomjp424.github.io/pet-finder-quiz/',
          repoLink: 'https://github.com/Tomjp424/pet-finder-quiz',
     },
     {
         title: 'Weather Dashboard App',
-         image: './src/assets/weatherdashboard-screenshot.jpg',
+         image: '/assets/weatherdashboard-screenshot.jpg',
          deployedLink: 'https://weather-dashboard-app-jc5a.onrender.com/',
          repoLink: 'https://github.com/pauletters/Weather-Dashboard-App',
     },
     {
         title: 'Employee Tracker',
-         image: './src/assets/employeetracker-screenshot.jpg',
+         image: '/assets/employeetracker-screenshot.jpg',
          deployedLink: 'https://drive.google.com/file/d/1_U7Zfv6YAcGObshMqGb-fd180Fx0jFk4/view?usp=sharing',
          repoLink: 'https://github.com/pauletters/Employee-Tracker',
     },
     {
         title: 'Vehicle Builder',
-         image: './src/assets/vehiclebuilder-screenshot.jpg',
+         image: '/assets/vehiclebuilder-screenshot.jpg',
          deployedLink: 'https://drive.google.com/file/d/1pwrYICcUN2BfKtX_KCkZesVdKhtPqasJ/view',
          repoLink: 'https://github.com/pauletters/Vehicle-Builder?tab=readme-ov-file',
     },
     {
         title: 'Readme Generator',
-         image: './src/assets/readmegenerator-screenshot.jpg',
+         image: '/assets/readmegenerator-screenshot.jpg',
          deployedLink: 'https://drive.google.com/file/d/1LjZ4mqHSOVHYktlrs6KSboskx5bhbq7h/view',
          repoLink: 'https://github.com/pauletters/README-Generator?tab=readme-ov-file',
     },
     {
         title: 'Study Guide',
-         image: './src/assets/studyguide-screenshot.jpg',
+         image: '/assets/studyguide-screenshot.jpg',
          deployedLink: 'https://pauletters.github.io/prework-study-guide/',
          repoLink: 'https://github.com/pauletters/prework-study-guide',
     },
