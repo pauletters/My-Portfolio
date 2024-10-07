@@ -10,7 +10,7 @@ const AboutMe = ({ setCurrentSection }) => {
   return (
     <section className='about-me'>
       <div>
-      <img src='src/assets/Bio-Pic.jpg' alt='Image of Ryan Paulette' />
+      <img src='assets/Bio-Pic.jpg' alt='Image of Ryan Paulette' />
       <h2>About Me</h2>
       <p>
        I am an up and coming web developer currently making my way through a coding bootcamp with the University of Richmond. 
