@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import './portfolio.css';
 
+// The Portfolio component is a functional component that displays a list of projects. 
+// It uses the useEffect hook to set the current section of the page to 'Portfolio' when the component is rendered.
 const Portfolio = ({ setCurrentSection }) => {
         useEffect(() => {
         setCurrentSection('Portfolio');
@@ -45,6 +47,8 @@ const Portfolio = ({ setCurrentSection }) => {
     },
    ];
 
+//    The Portfolio component returns a section element with a class name of 'portfolio' which is used to style the component 
+//    as well as all the other class names used in the component.
     return (
         <section className='portfolio'>
             <h2>Portfolio</h2>
