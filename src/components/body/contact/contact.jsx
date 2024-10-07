@@ -44,7 +44,7 @@ const Contact = ({ setCurrentSection }) => {
     return (
         <section className='contact'>
       <h2>Contact</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} netlify>
         <div>
           <label htmlFor="name">Name:</label>
           <input
