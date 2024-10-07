@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Header from './components/header/header';
-import AboutMe from './components/body/about';
-import Footer from './components/footer';
-import Portfolio from './components/body/portfolio';
-import Contact from './components/body/contact';
-import Resume from './components/body/resume';
+import AboutMe from './components/body/about/about';
+import Footer from './components/footer/footer';
+import Portfolio from './components/body/portfolio/portfolio';
+import Contact from './components/body/contact/contact';
+import Resume from './components/body/resume/resume';
 import './App.css';
 
+// The App component is the root component of the application. It uses the useState hook to manage the current section of the page.
 const App = () => {
   const [currentSection, setCurrentSection] = useState('');
   return (

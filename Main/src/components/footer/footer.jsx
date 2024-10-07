@@ -1,8 +1,9 @@
 import './footer.css';
-import githubLogo from '../assets/github-logo.png';
-import linkedinLogo from '../assets/linkedin-logo.png';
-import stackoverflowLogo from '../assets/stackoverflow-logo.png';
+import githubLogo from '../../assets/github-logo.png';
+import linkedinLogo from '../../assets/linkedin-logo.png';
+import stackoverflowLogo from '../../assets/stackoverflow-logo.png';
 
+// The Footer component is a functional component that displays social media links.
 const Footer = () => {
     return (
         <footer>

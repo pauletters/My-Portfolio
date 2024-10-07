@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './resume.css';
 
+// The Resume component is a functional component that displays the resume section of the page. A link is included to download the resume.
 const Resume = ({ setCurrentSection }) => {
         useEffect(() => {
         setCurrentSection('Resume');
@@ -18,7 +19,7 @@ const Resume = ({ setCurrentSection }) => {
                 <li>Node.js</li>
                 <li>Express.js</li>
                 <li>TypeScript</li>
-                <li>PostGres SQL</li>
+                <li>PostgreSQL</li>
                 <li>React</li>
             </ul>
         </section>
