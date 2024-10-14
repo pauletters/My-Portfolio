@@ -40,10 +40,10 @@ const Portfolio = ({ setCurrentSection }) => {
          repoLink: 'https://github.com/pauletters/README-Generator?tab=readme-ov-file',
     },
     {
-        title: 'Study Guide',
-         image: '/assets/studyguide-screenshot.jpg',
-         deployedLink: 'https://pauletters.github.io/prework-study-guide/',
-         repoLink: 'https://github.com/pauletters/prework-study-guide',
+        title: 'Candidate Search App',
+         image: 'src/assets/candidate-screenshot.jpg',
+         deployedLink: 'https://candidate-search-app-7n8j.onrender.com',
+         repoLink: 'https://github.com/pauletters/Candidate-Search-App',
     },
    ];
 
