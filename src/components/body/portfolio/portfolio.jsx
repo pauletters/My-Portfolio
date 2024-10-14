@@ -41,7 +41,7 @@ const Portfolio = ({ setCurrentSection }) => {
     },
     {
         title: 'Candidate Search App',
-         image: 'src/assets/candidate-screenshot.jpg',
+         image: '/assets/candidate-screenshot.jpg',
          deployedLink: 'https://candidate-search-app-7n8j.onrender.com',
          repoLink: 'https://github.com/pauletters/Candidate-Search-App',
     },
