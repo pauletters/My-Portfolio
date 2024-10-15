@@ -3,6 +3,7 @@ import './portfolio.css';
 
 // The Portfolio component is a functional component that displays a list of projects. 
 // It uses the useEffect hook to set the current section of the page to 'Portfolio' when the component is rendered.
+// Reminder: place any new images in the public/assets folder.
 const Portfolio = ({ setCurrentSection }) => {
         useEffect(() => {
         setCurrentSection('Portfolio');
@@ -41,7 +42,7 @@ const Portfolio = ({ setCurrentSection }) => {
     },
     {
         title: 'Candidate Search App',
-         image: 'dist/assets/candidate-screenshot.jpg',
+         image: '/assets/candidate-screenshot.jpg',
          deployedLink: 'https://candidate-search-app-7n8j.onrender.com',
          repoLink: 'https://github.com/pauletters/Candidate-Search-App',
     },
