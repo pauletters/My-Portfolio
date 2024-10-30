@@ -11,10 +11,16 @@ const Portfolio = ({ setCurrentSection }) => {
      
    const projects = [
     {
-        title: 'Petfinder Quiz',
-         image: '/assets/petfinderquiz-screenshot.jpg',
-         deployedLink: 'https://tomjp424.github.io/pet-finder-quiz/',
-         repoLink: 'https://github.com/Tomjp424/pet-finder-quiz',
+        title: 'Questionable Intelligence Trivia Game',
+         image: '/assets/questionable-intelligence-screenshot.jpg',
+         deployedLink: 'https://questionable-intelligence.onrender.com',
+         repoLink: 'https://github.com/pauletters/Questionable-Intelligence',
+    },
+    {
+        title: 'Candidate Search App',
+         image: '/assets/candidate-screenshot.jpg',
+         deployedLink: 'https://candidate-search-app-7n8j.onrender.com',
+         repoLink: 'https://github.com/pauletters/Candidate-Search-App',
     },
     {
         title: 'Weather Dashboard App',
@@ -35,16 +41,10 @@ const Portfolio = ({ setCurrentSection }) => {
          repoLink: 'https://github.com/pauletters/Vehicle-Builder?tab=readme-ov-file',
     },
     {
-        title: 'Readme Generator',
-         image: '/assets/readmegenerator-screenshot.jpg',
-         deployedLink: 'https://drive.google.com/file/d/1LjZ4mqHSOVHYktlrs6KSboskx5bhbq7h/view',
-         repoLink: 'https://github.com/pauletters/README-Generator?tab=readme-ov-file',
-    },
-    {
-        title: 'Candidate Search App',
-         image: '/assets/candidate-screenshot.jpg',
-         deployedLink: 'https://candidate-search-app-7n8j.onrender.com',
-         repoLink: 'https://github.com/pauletters/Candidate-Search-App',
+        title: 'Petfinder Quiz',
+         image: '/assets/petfinderquiz-screenshot.jpg',
+         deployedLink: 'https://tomjp424.github.io/pet-finder-quiz/',
+         repoLink: 'https://github.com/Tomjp424/pet-finder-quiz',
     },
    ];
 

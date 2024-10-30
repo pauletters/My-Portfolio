@@ -1,101 +1,146 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import PropTypes from 'prop-types';
 import './contact.css';
 
-// The Contact component is a functional component that displays the contact section of the page.
-const Contact = ({ setCurrentSection }) => {
+function Contact({ setCurrentSection }) {
+    const formRef = useRef(null);
+    const [formData, setFormData] = useState({
+        user_name: '',
+        user_email: '',
+        message: ''
+    });
+    const [status, setStatus] = useState({
+        error: '',
+        isSubmitting: false
+    });
+
+    // Set current section
     useEffect(() => {
-        setCurrentSection('Contact');
-    }, [setCurrentSection]);
-    
-    // The formState object is used to keep track of the form data. The setFormState function is used to update the formState object.
-    // The errorMessage state variable is used to store any error messages that occur during form validation.
-    const [ formState, setFormState ] = useState({ name: '', email: '', message: '' });
-    const [ errorMessage, setErrorMessage ] = useState('');
+        if (setCurrentSection) {
+            setCurrentSection('Contact');
+        }
+    }, []);
 
-    // The handleInputChange function is called whenever an input field value changes. 
-    // It updates the formState object with the new value.
-    const handleInputChange = (e) => {
-        setFormState({ ...formState, [e.target.name]: e.target.value });
-    };
+    // Initialize EmailJS
+    useEffect(() => {
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+        if (publicKey) {
+            emailjs.init(publicKey);
+        }
+    }, []);
 
-    // The handleBlur function is called whenever an input field loses focus.
-    const handleBlur = (e) => {
-        if (!e.target.value) {
-            setErrorMessage(`${e.target.name} is required.`);
-        } else {
-            setErrorMessage('');
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+        // Clear any errors when user starts typing
+        if (status.error) {
+            setStatus(prev => ({ ...prev, error: '' }));
         }
     };
 
-    // The validateEmail function is used to validate an email address using a regular expression.
     const validateEmail = (email) => {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email.toLowerCase());
+        return email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
     };
 
-    // The handleSubmit function is called when the form is submitted.
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!validateEmail(formState.email)) {
-            setErrorMessage('Email is invalid.');
+
+        if (!validateEmail(formData.user_email)) {
+            setStatus(prev => ({ ...prev, error: 'Please enter a valid email address' }));
             return;
         }
 
-        // This is where you can add the form submission logic to send the form data to a server eventually.
+        setStatus(prev => ({ ...prev, isSubmitting: true }));
 
-        // Reset form fields after successful submission
-        setFormState({ 
-            name: '',
-            email: '',
-            message: '' 
-        });
+        try {
+            await emailjs.sendForm(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                formRef.current,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
 
-        setErrorMessage('');
+            setFormData({
+                user_name: '',
+                user_email: '',
+                message: ''
+            });
 
-        alert('Your message was sent successfully!');
+            alert('Message sent successfully!');
+        } catch (error) {
+            console.error('Failed to send message:', error);
+            setStatus(prev => ({ ...prev, error: 'Failed to send message. Please try again.' }));
+        } finally {
+            setStatus(prev => ({ ...prev, isSubmitting: false }));
+        }
     };
 
     return (
-        <section className='contact'>
-            <h2>Contact</h2>
-            <form onSubmit={handleSubmit} netlify>
+        <section className="contact">
+            <h2>Contact Me</h2>
+            <form ref={formRef} onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="name">Name:</label>
+                    <label htmlFor="user_name">Name:</label>
                     <input
+                        id="user_name"
                         type="text"
-                        name="name"
-                        value={formState.name}
-                        onChange={handleInputChange}
-                        onBlur={handleBlur}
+                        name="user_name"
+                        value={formData.user_name}
+                        onChange={handleChange}
                         required
                     />
                 </div>
+
                 <div>
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="user_email">Email:</label>
                     <input
+                        id="user_email"
                         type="email"
-                        name="email"
-                        value={formState.email}
-                        onChange={handleInputChange}
-                        onBlur={handleBlur}
+                        name="user_email"
+                        value={formData.user_email}
+                        onChange={handleChange}
                         required
                     />
                 </div>
+
                 <div>
                     <label htmlFor="message">Message:</label>
                     <textarea
+                        id="message"
                         name="message"
-                        value={formState.message}
-                        onChange={handleInputChange}
-                        onBlur={handleBlur}
+                        value={formData.message}
+                        onChange={handleChange}
                         required
                     />
                 </div>
-                {errorMessage && <p className="error-text">{errorMessage}</p>}
-                <button type="submit">Submit</button>
+
+                {status.error && (
+                    <div className="error-text">
+                        <p>{status.error}</p>
+                    </div>
+                )}
+
+                <button 
+                    type="submit" 
+                    disabled={status.isSubmitting}
+                >
+                    {status.isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
             </form>
         </section>
     );
+}
+
+Contact.propTypes = {
+    setCurrentSection: PropTypes.func
+};
+
+Contact.defaultProps = {
+    setCurrentSection: () => {}
 };
 
 export default Contact;
