@@ -6,8 +6,8 @@
   }
   
   .about-me img {
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 265px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--primary-color);
@@ -15,4 +15,13 @@
 
   h2 {
     padding-top: 2rem;
+  }
+
+  .about-me p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-me p:last-child {
+    margin-bottom: 0;
   }

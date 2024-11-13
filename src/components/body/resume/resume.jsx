@@ -20,6 +20,8 @@ const Resume = ({ setCurrentSection }) => {
                 <li>Express.js</li>
                 <li>TypeScript</li>
                 <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>Sequelize</li>
                 <li>React</li>
             </ul>
         </section>

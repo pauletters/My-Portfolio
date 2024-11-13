@@ -31,13 +31,13 @@ const Portfolio = ({ setCurrentSection }) => {
     {
         title: 'Employee Tracker',
          image: '/assets/employeetracker-screenshot.jpg',
-         deployedLink: 'https://drive.google.com/file/d/1_U7Zfv6YAcGObshMqGb-fd180Fx0jFk4/view?usp=sharing',
+         liveDemoLink: 'https://drive.google.com/file/d/1_U7Zfv6YAcGObshMqGb-fd180Fx0jFk4/view?usp=sharing',
          repoLink: 'https://github.com/pauletters/Employee-Tracker',
     },
     {
         title: 'Vehicle Builder',
          image: '/assets/vehiclebuilder-screenshot.jpg',
-         deployedLink: 'https://drive.google.com/file/d/1pwrYICcUN2BfKtX_KCkZesVdKhtPqasJ/view',
+         liveDemoLink: 'https://drive.google.com/file/d/1pwrYICcUN2BfKtX_KCkZesVdKhtPqasJ/view',
          repoLink: 'https://github.com/pauletters/Vehicle-Builder?tab=readme-ov-file',
     },
     {
@@ -59,8 +59,21 @@ const Portfolio = ({ setCurrentSection }) => {
                     <img src={project.image} alt={`Screenshot of ${project.title}`} />
                     <h3>{project.title}</h3>
                     <div className='project-links'>
-                    <a href={project.deployedLink} target='_blank' rel='noopener noreferrer'>Deployed Application</a>
-                    <a href={project.repoLink} target='_blank' rel='noopener noreferrer'>Github Repository</a>
+                    {project.deployedLink && (
+                                <a href={project.deployedLink} target='_blank' rel='noopener noreferrer'>
+                                    Deployed Application
+                                </a>
+                            )}
+                            {project.liveDemoLink && (
+                                <a href={project.liveDemoLink} target='_blank' rel='noopener noreferrer'>
+                                    Live Demo
+                                </a>
+                            )}
+                            {project.repoLink && (
+                                <a href={project.repoLink} target='_blank' rel='noopener noreferrer'>
+                                    Github Repository
+                                </a>
+                            )}
                     </div>
                 </div>
             ))}
