@@ -21,6 +21,12 @@
   }
   
   ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 2rem;
+    max-width: 28rem;
+    margin: 0 auto;
+    margin-top: 1rem;
     list-style-type: none;
     padding-left: 0;
     text-align: center;
