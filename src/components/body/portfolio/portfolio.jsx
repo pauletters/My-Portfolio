@@ -17,6 +17,12 @@ const Portfolio = ({ setCurrentSection }) => {
          repoLink: 'https://github.com/pauletters/Questionable-Intelligence',
     },
     {
+        title: 'Novel Navigator',
+         image: '/assets/novelnavigator-screenshot.jpg',
+         deployedLink: 'https://novel-navigator.onrender.com',
+         repoLink: 'https://github.com/pauletters/Novel-Navigator',
+    },
+    {
         title: 'Candidate Search App',
          image: '/assets/candidate-screenshot.jpg',
          deployedLink: 'https://candidate-search-app-7n8j.onrender.com',
@@ -33,12 +39,6 @@ const Portfolio = ({ setCurrentSection }) => {
          image: '/assets/employeetracker-screenshot.jpg',
          liveDemoLink: 'https://drive.google.com/file/d/1_U7Zfv6YAcGObshMqGb-fd180Fx0jFk4/view?usp=sharing',
          repoLink: 'https://github.com/pauletters/Employee-Tracker',
-    },
-    {
-        title: 'Vehicle Builder',
-         image: '/assets/vehiclebuilder-screenshot.jpg',
-         liveDemoLink: 'https://drive.google.com/file/d/1pwrYICcUN2BfKtX_KCkZesVdKhtPqasJ/view',
-         repoLink: 'https://github.com/pauletters/Vehicle-Builder?tab=readme-ov-file',
     },
     {
         title: 'Petfinder Quiz',
