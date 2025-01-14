@@ -28,10 +28,11 @@ const AboutMe = ({ setCurrentSection }) => {
       </p>
       
       <p>
-      Currently, I'm expanding my technical expertise through the University of Richmond's Full Stack Development Bootcamp. 
+      I have recently completed the University of Richmond's Full Stack Development Bootcamp where 
       I've built a strong foundation in modern web technologies including HTML, CSS, JavaScript, TypeScript, and React, along 
-      with backend technologies such as Node.js, Express.js, PostgreSQL, and MongoDB. I complement these technical skills with 
-      database management through Sequelize, enabling me to create comprehensive, scalable applications.
+      with backend technologies such as Node, Express, GraphQL, Python, PostgreSQL, and MongoDB. I'm actively working on expanding my
+      technical expertise through continued learning courses offered by the Bootcamp. I am currently learning AWS with plans on learning 
+      Java and C# next.
       </p>
       </div>
     </section>
