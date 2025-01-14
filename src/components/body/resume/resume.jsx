@@ -10,24 +10,55 @@ const Resume = ({ setCurrentSection }) => {
     return (
         <section className='resume'>
             <h2>Resume</h2>
-            <a href='/assets/Ryan-Resume.pdf' download>Download Resume</a>
-            <h3>Technical Skills</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>GraphQL</li>
-                <li>TypeScript</li>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>Sequelize</li>
-                <li>React</li>
-                <li>Cypress</li>
-                <li>Vitest</li>
-                <li>Git</li>
-            </ul>
+            <a href='/assets/Ryan-Resume.pdf' download className='download-button'>Download Resume</a>
+            
+            <div className="skills-section">
+                <h3>Technical Skills</h3>
+                <div className="skills-grid">
+                    <div className="skill-category">
+                        <h4>Frontend Development</h4>
+                        <ul className="skill-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                    
+                    <div className="skill-category">
+                        <h4>Backend Development</h4>
+                        <ul className="skill-list">
+                            <li>Node</li>
+                            <li>Express</li>
+                            <li>Inquirer</li>
+                            <li>Python</li>
+                            <li>GraphQL</li>
+                            <li>Apollo</li>
+                        </ul>
+                    </div>
+                    
+                    <div className="skill-category">
+                        <h4>Databases Technologies</h4>
+                        <ul className="skill-list">
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Mongoose</li>
+                            <li>Sequelize</li>
+                        </ul>
+                    </div>
+                    
+                    <div className="skill-category">
+                        <h4>Testing & Development</h4>
+                        <ul className="skill-list">
+                            <li>Cypress</li>
+                            <li>Vitest</li>
+                            <li>CI/CD</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 };
