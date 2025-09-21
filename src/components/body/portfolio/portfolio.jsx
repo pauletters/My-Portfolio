@@ -19,8 +19,8 @@ const Portfolio = ({ setCurrentSection }) => {
             • Built with: MongoDB, Express, React, Node, GraphQL, TypeScript, Apollo, and JWT authentication
             
             • Key contributions: Implemented user authentication, navigation system, about page, and D&D API integration for spells and equipment`,
-         deployedLink: 'https://total-player-knowledge.onrender.com/',
-         repoLink: 'https://github.com/pauletters/Total-Player-Knowledge',
+         deployedLink: 'https://tpk-0wcw.onrender.com',
+         repoLink: 'https://github.com/pauletters/TPK',
     },
     {
         title: 'Questionable Intelligence Trivia Game',
